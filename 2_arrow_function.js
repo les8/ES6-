@@ -28,4 +28,16 @@ const person = {
     },
 };
 
-person.shit3();
+
+// В конструкторе
+function User(name) {
+    this.name = name;
+    this.getArrowName = () => this.name;  // Vova
+    this.getDeclarationName = function() {
+        return this.name;  // Vova
+    }
+}
+
+let volodya = new User('Vova');
+console.log(volodya.getArrowName());
+console.log(volodya.getDeclarationName());
